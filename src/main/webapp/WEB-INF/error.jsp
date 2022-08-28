@@ -7,7 +7,6 @@
 <head>
     <meta charset="UTF-8">
     <title><fmt:message key="index.title"/></title>
-<link href="css/styles.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -16,7 +15,9 @@
 
 <h3>Something went wrong</h3>
 <p>
-    <${exception.getMessage() }
+    <${exception.getMessage() }>
+    <${jakarta.servlet.error.exception}>
+    <${jakarta.servlet.error.servlet_name}>
 </p>
 
 </body>

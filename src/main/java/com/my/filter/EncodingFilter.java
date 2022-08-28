@@ -1,10 +1,12 @@
-package com.example.filter;
+package com.my.filter;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.annotation.WebInitParam;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
@@ -13,6 +15,8 @@ import java.io.IOException;
         dispatcherTypes = {DispatcherType.REQUEST}
 )
 public class EncodingFilter implements Filter {
+
+    static final Logger LOG = LoggerFactory.getLogger(EncodingFilter.class);
 
     private String encoding;
 
@@ -23,17 +27,17 @@ public class EncodingFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-//        System.out.println("before chain ");
+
         HttpServletRequest req = (HttpServletRequest) request;
-        System.out.println("from doFilter Encoding = " + req.getCharacterEncoding());
+//        LOG.debug("from doFilter Encoding = " + req.getCharacterEncoding());
         if (req.getCharacterEncoding() == null) {
-            System.out.println("set encoding " + encoding);
+            LOG.debug("set encoding: {} ", encoding);
             req.setCharacterEncoding(encoding);
-            ((HttpServletResponse) response).sendRedirect("index.html");
+            ((HttpServletResponse) response).sendRedirect("index.jsp");
             return;
         }
 
         chain.doFilter(request, response);
-//        System.out.println("after chain ");
+
     }
 }

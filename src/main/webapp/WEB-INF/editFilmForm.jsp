@@ -13,12 +13,13 @@
 <%@ include file="/WEB-INF/fragments/header.jspf"%>
 <h3>Add Film</h3>
 <form action="app" method="post">
-    <input type="hidden" name="cmd" value="addFilm"><br>
+    <input type="hidden" name="cmd" value="editFilm"><br>
+    <input type="hidden" name="id" value="${film.id}"><br>
     Film name: <input name="name" value="${film.name}"><br>
-    Film description: <input name="description"><br>
-    Film duration: <input name="duration"><br>
-    Film genre: <input name="genre"><br>
-    <input type="submit" value="Add">
+    Film description: <input name="description" value="${film.description}"><br>
+    Film duration: <input name="duration" value="${film.duration}"><br>
+    Film genre: <input name="genre" value="${film.genre.id}"><br>
+    <input type="submit" value="Edit">
 </form>
 </body>
 </html>

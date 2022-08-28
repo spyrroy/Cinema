@@ -1,4 +1,4 @@
-package command;
+package com.my.command;
 
 public class CommandException extends Exception {
     public CommandException() {

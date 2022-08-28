@@ -1,4 +1,4 @@
-package entity;
+package com.my.entity;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
@@ -9,6 +9,12 @@ public class Ticket {
     private Seat seat;
     private Session session;
     private LocalDateTime date;
+
+    public Ticket(User user, Seat seat, Session session) {
+        this.user = user;
+        this.seat = seat;
+        this.session = session;
+    }
 
     public Ticket(User user, Seat seat, Session session, LocalDateTime date) {
         this.user = user;

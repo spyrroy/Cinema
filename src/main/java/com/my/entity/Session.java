@@ -1,4 +1,4 @@
-package entity;
+package com.my.entity;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -9,6 +9,18 @@ public class Session {
     private LocalDate date;
     private LocalTime time;
     private Film film;
+    private int freeSeats;
+
+    public int getFreeSeats() {
+        return freeSeats;
+    }
+
+    public void setFreeSeats(int freeSeats) {
+        this.freeSeats = freeSeats;
+    }
+
+    public Session() {
+    }
 
     public Session(LocalDate date, LocalTime time, Film film) {
         this.date = date;

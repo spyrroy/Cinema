@@ -1,8 +1,8 @@
-package servlet;
+package com.my.servlet;
 
-import command.Command;
-import command.CommandContainer;
-import command.CommandException;
+import com.my.command.Command;
+import com.my.command.CommandContainer;
+import com.my.command.CommandException;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -32,7 +32,7 @@ public class MainServlet extends HttpServlet {
             String cmdName = req.getParameter("cmd");
             LOG.debug("cmdName: {} ", cmdName);
             Command command = commands.getCommand(cmdName);
-            LOG.debug("cmdName: {} ", command);
+            LOG.debug("commandName: {} ", command);
             String url = null;
 
             url = command.doCommand(req, resp);

@@ -9,20 +9,16 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.time.LocalDate;
 import java.util.List;
 
-public class AddSessionDateFormCommand extends Command {
+public class AddSessionCalendarFormCommand extends Command {
     private final SessionService sessionService;
     private final FilmService filmService;
-    public AddSessionDateFormCommand(SessionService sessionService, FilmService filmService) {
+    public AddSessionCalendarFormCommand(SessionService sessionService, FilmService filmService) {
         this.sessionService = sessionService;
         this.filmService = filmService;
     }
 
     @Override
     public String doCommand(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
-        LocalDate date = LocalDate.parse(req.getParameter("date"));
-        List<Session> sessions = sessionService.getSessionsByDate(date);
-        req.setAttribute("sessions", sessions);
-//        return "app?cmd=addSessionForm";
-        return "WEB-INF/allSessions.jsp";
+        return "WEB-INF/addSessionDateForm.jsp";
     }
 }

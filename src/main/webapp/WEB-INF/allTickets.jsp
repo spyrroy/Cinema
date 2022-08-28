@@ -19,33 +19,27 @@
     <div class="row col-md-9 col-md-offset-2 custyle">
         <table class="table table-striped custab">
             <thead>
-            <a href="app?cmd=addSessionForm&date=${date}" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new Session</a>
             <tr>
                 <th>Number</th>
                 <th>Date</th>
                 <th>Time</th>
                 <th>Film</th>
-                <th>Free seats</th>
-                <th class="text-center">Action</th>
-                <th class="text-center">Ticket</th>
+                <th>Seat number</th>
+                <th>Date of purchase</th>
             </tr>
             </thead>
 
-            <c:forEach items="${sessions}" var="session" varStatus="loop">
+            <c:forEach items="${tickets}" var="ticket" varStatus="loop">
+                <c:set var="session" value="${ticket.session}"/>
+                <c:set var="film" value="${session.film}"/>
+                <c:set var="seat" value="${ticket.seat}"/>
                 <tr>
                     <td>${loop.count}</td>
                     <td>${session.date}</td>
                     <td>${session.time}</td>
-                    <td>${session.film.name}</td>
-                    <td>${session.freeSeats}</td>
-                    <td class="text-center">
-                        <a class='btn btn-info btn-xs' href="app?cmd=addSessionForm&id=${session.id}"><span
-                                class="glyphicon glyphicon-edit"></span> Edit</a>
-                        <a class="btn btn-danger btn-xs" href="app?cmd=deleteSession&id=${session.id}"><span
-                                class="glyphicon glyphicon-remove"></span> Del</a></td>
-                    <td class="text-center">
-                        <a class="btn btn-primary btn-xs" href="app?cmd=addTicketForm&id=${session.id}"><span
-                                class="glyphicon glyphicon-shopping-cart"></span> Buy ticket</a></td>
+                    <td>${film.name}</td>
+                    <td>${seat.number}</td>
+                    <td>${ticket.date}</td>
 
                 </tr>
 

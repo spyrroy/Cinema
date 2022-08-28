@@ -7,15 +7,17 @@
 <head>
     <meta charset="UTF-8">
     <title><fmt:message key="index.title"/></title>
-<link href="css/styles.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
-<%@ include file="fragments/header.jspf"%>
-<h3>Add product</h3>
+<%@ include file="/WEB-INF/fragments/header.jspf"%>
+<h3>Add Film</h3>
 <form action="app" method="post">
-    <input type="hidden" name="cmd" value="addProduct"><br>
-    Product name: <input name="name"><br>
+    <input type="hidden" name="cmd" value="addFilm"><br>
+    Film name: <input name="name"><br>
+    Film description: <input name="description"><br>
+    Film duration: <input name="duration"><br>
+    Film genre: <input name="genre"><br>
     <input type="submit" value="Add">
 </form>
 </body>

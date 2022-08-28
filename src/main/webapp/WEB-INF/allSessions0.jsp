@@ -19,7 +19,7 @@
     <div class="row col-md-9 col-md-offset-2 custyle">
         <table class="table table-striped custab">
             <thead>
-            <a href="app?cmd=addSessionForm&date=${date}" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new Session</a>
+            <a href="app?cmd=addSessionDateForm" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new Session</a>
             <tr>
                 <th>Number</th>
                 <th>Date</th>

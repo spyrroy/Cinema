@@ -1,11 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ page import="java.util.Date"%>
+         pageEncoding="UTF-8" %>
+<%@ page import="java.util.Date" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <p style="text-align: right;">
-<a href="locale?lang=en">EN</a> |
-<a href="locale?lang=uk">UK</a>
+    <a href="locale?lang=en">EN</a> |
+    <a href="locale?lang=ua">UA</a>
+</p>
+<p style="text-align: left;">
+    <a href="app">Home</a>
+    <a href="app?cmd=loginPage">Login</a>
+    <a href="app?cmd=registerPage">Register</a>
+<h2>Hello ${user.login } <c:if test="${user != null}"> , your role is ${user.role.role} </c:if> </h2>
+<%--${requestScope}--%>
+
+<%--<c:forEach var="par" items="${requestScope}">--%>
+
+<%--        ${par.key} = ${par.value} <br>--%>
+
+<%--</c:forEach>--%>
+
+
 </p>
 <hr>
-<h2>Hello ${user.name }</h2>
+
 <hr>

@@ -1,6 +1,5 @@
-package command;
+package com.my.command;
 
-import command.Command;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 

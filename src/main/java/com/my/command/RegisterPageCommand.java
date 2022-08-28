@@ -1,2 +1,11 @@
-package com.my.command;public class RegisterPageCommand {
+package com.my.command;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class RegisterPageCommand extends Command {
+    @Override
+    public String doCommand(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
+        return "WEB-INF/register.jsp";
+    }
 }

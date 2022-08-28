@@ -16,32 +16,40 @@
 <%@ include file="/WEB-INF/fragments/header.jspf" %>
 
 <div class="container">
-    <div class="row col-md-6 col-md-offset-2 custyle">
+    <div class="row col-md-9 col-md-offset-2 custyle">
         <table class="table table-striped custab">
             <thead>
-            <a href="app?cmd=addFilmForm" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new Film</a>
+            <%--            <a href="app?cmd=addSessionForm&date=${date}" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new Session</a>--%>
+            <a href="app?cmd=addSessionDateForm" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new Session</a>
             <tr>
                 <th>Number</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Duration</th>
-                <th>Genre</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Film</th>
+                <th>Free seats</th>
                 <th class="text-center">Action</th>
+                <th class="text-center">Ticket</th>
             </tr>
             </thead>
 
-            <c:forEach items="${films}" var="film" varStatus="loop">
+            <c:forEach items="${sessions}" var="session" varStatus="loop">
                 <tr>
                     <td>${loop.count}</td>
-                    <td>${film.name}</td>
-                    <td>${film.description}</td>
-                    <td>${film.duration}</td>
-                    <td>${film.genre.name}</td>
-                    <td class="text-center"><a class='btn btn-info btn-xs' href="app?cmd=addFilmForm&id=${film.id}" ><span class="glyphicon glyphicon-edit"></span> Edit</a>
-                        <a href="app?cmd=deleteFilm&id=${film.id}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
-                    </a>
-                    </td>
+                    <td>${session.date}</td>
+                    <td>${session.time}</td>
+                    <td>${session.film.name}</td>
+                    <td>${session.freeSeats}</td>
+                    <td class="text-center">
+                        <a class='btn btn-info btn-xs' href="app?cmd=addSessionForm&id=${session.id}"><span
+                                class="glyphicon glyphicon-edit"></span> Edit</a>
+                        <a class="btn btn-danger btn-xs" href="app?cmd=deleteSession&id=${session.id}"><span
+                                class="glyphicon glyphicon-remove"></span> Del</a></td>
+                    <td class="text-center">
+                        <a class="btn btn-primary btn-xs" href="app?cmd=addTicketForm&id=${session.id}"><span
+                                class="glyphicon glyphicon-shopping-cart"></span> Buy ticket</a></td>
+
                 </tr>
+
             </c:forEach>
         </table>
     </div>

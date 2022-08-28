@@ -1,2 +1,7 @@
-package com.my.service;public interface GenreService {
+package com.my.service;
+
+import com.my.entity.Genre;
+
+public interface GenreService {
+    Genre getGenreById(int id);
 }

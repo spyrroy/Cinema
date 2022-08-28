@@ -12,23 +12,22 @@
 </head>
 <body>
 <%@ include file="fragments/header.jspf" %>
-<h2>All products</h2>
+<h2>All Films</h2>
 <c:choose>
-    <c:when test="${empty products}">
-        <p> No products</p>
+    <c:when test="${empty films}">
+        <p> No Films</p>
     </c:when>
     <c:otherwise>
-
-
         <ul>
-            <c:forEach var="product" items="${products }">
+            <c:forEach var="film" items="${films }">
                 <li>
-                        ${product }
+                        ${film }
                 </li>
             </c:forEach>
         </ul>
     </c:otherwise>
 </c:choose>
+
 
 </body>
 </html>
