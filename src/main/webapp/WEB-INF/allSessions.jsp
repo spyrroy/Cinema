@@ -15,12 +15,42 @@
 <body>
 <%@ include file="/WEB-INF/fragments/header.jspf" %>
 
+
+
 <div class="container">
     <div class="row col-md-9 col-md-offset-2 custyle">
+
+<%--            <ul>--%>
+<%--                <li>--%>
+                    <form action="app" method="get">
+                        <input type="hidden" name="cmd" value="allSessions"><br>
+                        <select name="date">Date
+                            <option value="${date}">Date:</option>
+                            <c:forEach items="${dates}" var="date">
+                                <option value="${date}">${date}</option>
+                            </c:forEach>
+                        </select>
+                        <select name="orderBy">
+                            <option value="${orderBy}">Order By:</option>
+<%--                            <option value="time">Start time</option>--%>
+                            <option value="film_name">Film name</option>
+                            <option value="free_seats">Free seats</option>
+                        </select>
+                        <select name="direction">
+                            <option value="${direction}">Direction:</option>
+                            <option value="ASC">Asc</option>
+                            <option value="DESC">Desc</option>
+                        </select>
+                        <button type="submit" class="btn btn-info btn-sm">Sort</button>
+                    </form>
+<%--                </li>--%>
+<%--            </ul>--%>
+
         <table class="table table-striped custab">
             <thead>
-            <%--            <a href="app?cmd=addSessionForm&date=${date}" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new Session</a>--%>
+            <c:if test="${user.role.role == 'Admin'}">
             <a href="app?cmd=addSessionDateForm" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new Session</a>
+            </c:if>
             <tr>
                 <th>Number</th>
                 <th>Date</th>
@@ -40,8 +70,6 @@
                     <td>${session.film.name}</td>
                     <td>${session.freeSeats}</td>
                     <td class="text-center">
-                        <a class='btn btn-info btn-xs' href="app?cmd=addSessionForm&id=${session.id}"><span
-                                class="glyphicon glyphicon-edit"></span> Edit</a>
                         <a class="btn btn-danger btn-xs" href="app?cmd=deleteSession&id=${session.id}"><span
                                 class="glyphicon glyphicon-remove"></span> Del</a></td>
                     <td class="text-center">

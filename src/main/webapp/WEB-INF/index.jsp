@@ -19,9 +19,8 @@
     <c:if test="${user.role.role == 'Admin'}">
 <p><a href="app?cmd=addFilmForm"><fmt:message key="index.link.addFilm"/></a></p>
 <p><a href="app?cmd=addSessionDateForm">Add session</a></p>
-</c:if>
 <p><a href="app?cmd=allFilms">View films</a></p>
-
+</c:if>
 <p><a href="app?cmd=allSessions">View sessions</a></p>
 <c:if test="${user != null}">
     <p><a href="app?cmd=allTickets">View tickets</a></p>

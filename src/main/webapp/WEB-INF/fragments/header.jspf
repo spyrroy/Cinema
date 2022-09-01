@@ -8,16 +8,15 @@
 </p>
 <p style="text-align: left;">
     <a href="app">Home</a>
+    <c:if test="${user == null}">
     <a href="app?cmd=loginPage">Login</a>
     <a href="app?cmd=registerPage">Register</a>
+    </c:if>
+    <c:if test="${user != null}">
+    <a href="app?cmd=logout">Logout</a>
+    </c:if>
 <h2>Hello ${user.login } <c:if test="${user != null}"> , your role is ${user.role.role} </c:if> </h2>
-<%--${requestScope}--%>
 
-<%--<c:forEach var="par" items="${requestScope}">--%>
-
-<%--        ${par.key} = ${par.value} <br>--%>
-
-<%--</c:forEach>--%>
 
 
 </p>

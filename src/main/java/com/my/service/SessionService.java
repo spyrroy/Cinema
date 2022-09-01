@@ -10,10 +10,13 @@ import java.util.List;
 public interface SessionService {
     void add(Session session) throws DbException;
     List<Session> getAll();
+    List<Session> getSessionsSorted(String date, String orderBy, String direction);
     List<Session> getSessionsByDate(LocalDate localDate);
     Session getSessionById(int id);
     void update(Session session);
     void delete(int id);
     List<LocalTime> getOccupiedTimesFromSessions(List<Session> sessions);
     List<LocalTime> getAllSessionTimes();
+    List<LocalDate> getDatesFromSessions(List<Session> sessions);
+    List<LocalDate> getAllDatesFromSessions();
 }

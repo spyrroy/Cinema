@@ -10,103 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1b42fab-861f-4c01-8b82-db548fbfb37b" name="Changes" comment="added README.md">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/my/command/LogoutCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SQL/create_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/SQL/create_database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SQL/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/SQL/dump.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/FilmDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/FilmDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/GenreDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/GenreDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/SeatDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/SeatDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/SessionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/SessionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/TicketDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/TicketDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/FilmDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/FilmDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/GenreDAOImlp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/GenreDAOImlp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/SeatDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/SeatDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/SessionDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/SessionDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/TicketDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/TicketDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AddFilmCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AddFilmCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AddFilmFormCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AddFilmFormCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AddSessionCalendarFormCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AddSessionCalendarFormCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AddSessionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AddSessionCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AddSessionDateFormCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AddSessionDateFormCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AddSessionFormCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AddSessionFormCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AddTicketCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AddTicketCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AddTicketFormCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AddTicketFormCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AllFilmsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AllFilmsCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AllSessionsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AllSessionsCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AllTicketsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AllTicketsCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/CommandContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/CommandContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/CommandException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/CommandException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/DeleteFilmCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/DeleteFilmCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/DeleteSessionCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/DeleteSessionCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/EditFilmCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/EditFilmCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/IndexCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/IndexCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/LoginPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/LoginPageCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/RegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/RegisterPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/RegisterPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/entity/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/entity/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/entity/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/entity/Genre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/entity/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/entity/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/entity/Seat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/entity/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/entity/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/entity/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/exception/DbException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/exception/DbException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/filter/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/listener/AttributeListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/listener/AttributeListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/my/listener/ContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/listener/ContextListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/FilmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/FilmService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/GenreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/GenreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/SeatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/SeatService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/SessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/SessionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/TicketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/TicketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/impl/FilmServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/impl/FilmServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/impl/GenreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/impl/GenreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/impl/SeatServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/impl/SeatServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/impl/SessionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/impl/SessionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/impl/TicketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/impl/TicketServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/servlet/LocaleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/servlet/LocaleServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/servlet/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/servlet/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/util/PasswordUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/util/PasswordUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/util/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/util/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_ua.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_ua.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_uk.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_uk.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addFilmForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addFilmForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addSessionDateForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addSessionDateForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addSessionForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addSessionForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allFilms.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allFilms.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allFilms2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allFilms2.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allSessions.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allSessions.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allSessions0.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allSessions0.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allSessions2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allSessions2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allTickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allTickets.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/default.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/default.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/editFilm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/editFilmForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/editFilmForm.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/error.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fragments/header.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fragments/header.jspf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/loginExample.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/session.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/session.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/setLocale.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/setLocale.tag" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,30 +61,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Sync/OneDrive/EPAM/Cinema/src/main/webapp/WEB-INF",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Sync/OneDrive/EPAM/Cinema/src/main/webapp/WEB-INF&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.my.command" />
@@ -353,8 +270,19 @@
       <workItem from="1661493590030" duration="748000" />
       <workItem from="1661498431187" duration="5685000" />
       <workItem from="1661518692680" duration="5309000" />
-      <workItem from="1661685640208" duration="9592000" />
+      <workItem from="1661685640208" duration="10092000" />
+      <workItem from="1661774886927" duration="5315000" />
+      <workItem from="1661784843682" duration="1554000" />
+      <workItem from="1661843830693" duration="18896000" />
     </task>
+    <task id="LOCAL-00001" summary="added README.md">
+      <created>1661695849127</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661695849127</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

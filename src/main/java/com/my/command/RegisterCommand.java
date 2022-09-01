@@ -1,6 +1,7 @@
 package com.my.command;
 
 import com.my.entity.Film;
+import com.my.entity.Role;
 import com.my.entity.User;
 import com.my.exception.DbException;
 import com.my.service.UserService;
@@ -34,7 +35,7 @@ public class RegisterCommand extends Command {
         LOG.debug("salt: {}", salt);
         String securePassword = PasswordUtils.generateSecurePassword(password, salt);
 
-        User user = new User(login, firstname, secondname, securePassword, email, salt);
+        User user = new User(login, firstname, secondname, securePassword, email, salt, new Role("User"));
         LOG.debug("Adding User : {}", user);
 
         try {

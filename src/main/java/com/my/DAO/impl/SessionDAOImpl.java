@@ -11,15 +11,30 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class SessionDAOImpl implements SessionDAO {
     private static final String ADD_NEW_SESSION = "insert into session (date, time, film_id) values (?, ?, ?)";
-    private static final String GET_ALL_SESSIONS = "SELECT * FROM session s JOIN film f on s.film_id = f.film_id ORDER BY s.date, s.time";
-    private static final String GET_SESSIONS_BY_DATE = "select * from session where date = ?";
+    private static final String GET_ALL_SESSIONS = "select session.session_id, session.date, session.time, film.film_id, film.name, count(*) freeseats\n" +
+            "from session_seats\n" +
+            "join session session on session_seats.session_id = session.session_id\n" +
+            " join film film on film.film_id = session.film_id\n" +
+            "                    where free = 1 group by session.date, session.time, film.name ";
+//    private static final String GET_ALL_SESSIONS = "SELECT * FROM session s JOIN film f on s.film_id = f.film_id ORDER BY s.date, s.time";
+    private static final String GET_SESSIONS_BY_DATE = "select session.session_id, session.date, session.time, film.film_id, film.name, count(*) freeseats\n" +
+        "from session_seats\n" +
+        "join session session on session_seats.session_id = session.session_id\n" +
+        " join film film on film.film_id = session.film_id\n" +
+        "                    where free = 1 and session.date = ? group by session.date, session.time, film.name ";
     private static final String GET_SESSION_BY_ID = "select * from session where session_id = ?";
     private static final String SELECT_FREE_SEATS_BY_SESSION = "select count(*) from session_seats where session_id=? and free = 1";
     private static final String DELETE_SESSION_BY_ID = "delete from session where session_id = ?";
     private static final String UPDATE_SESSION_BY_ID = "update session set date = ?, time = ?, film_id = ? where session_id = ?";
+    private static final String ORDER_BY_DATE_TIME = "ORDER BY session.date, session.time ";
+    private static final String ORDER_BY_FREE_SEATS = "ORDER BY freeseats ";
+    private static final String ORDER_BY_FILM_NAME = "ORDER BY film.name ";
+    private static final String DESC = "desc";
+    private static final String ASC = "asc";
     private final DataSource ds;
 
     public SessionDAOImpl(DataSource ds) {
@@ -54,7 +69,7 @@ public class SessionDAOImpl implements SessionDAO {
     public List<Session> getAllSessions() {
         List<Session> sessions = new ArrayList<>();
         try (Connection connection = getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_SESSIONS);
+             PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_SESSIONS + ORDER_BY_DATE_TIME);
              ResultSet resultSet = preparedStatement.executeQuery()) {
             FilmDAO filmDAO = new FilmDAOImpl(ds);
             while (resultSet.next()) {
@@ -63,8 +78,60 @@ public class SessionDAOImpl implements SessionDAO {
                 LocalTime time = resultSet.getTime("time").toLocalTime();
                 int filmId = resultSet.getInt("film_id");
                 Film film = filmDAO.getFilmById(filmId);
+                int freeSeats = resultSet.getInt("freeseats");
                 Session session = new Session(id, date, time, film);
-                setFreeSeats(session);
+                session.setFreeSeats(freeSeats);
+                sessions.add(session);
+
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return sessions;
+    }
+
+    @Override
+    public List<Session> getAllSessions(Map<String, String> sortingParameters) {
+        List<Session> sessions = new ArrayList<>();
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(buildRequest(GET_ALL_SESSIONS, sortingParameters));
+             ResultSet resultSet = preparedStatement.executeQuery()) {
+            FilmDAO filmDAO = new FilmDAOImpl(ds);
+            while (resultSet.next()) {
+                int id = resultSet.getInt("session_id");
+                LocalDate date = resultSet.getDate("date").toLocalDate();
+                LocalTime time = resultSet.getTime("time").toLocalTime();
+                int filmId = resultSet.getInt("film_id");
+                Film film = filmDAO.getFilmById(filmId);
+                int freeSeats = resultSet.getInt("freeseats");
+                Session session = new Session(id, date, time, film);
+                session.setFreeSeats(freeSeats);
+                sessions.add(session);
+
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return sessions;
+    }
+
+    @Override
+    public List<Session> getAllSessionsOrderByFreeSeats() {
+        List<Session> sessions = new ArrayList<>();
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(GET_ALL_SESSIONS + ORDER_BY_FREE_SEATS);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
+            FilmDAO filmDAO = new FilmDAOImpl(ds);
+            while (resultSet.next()) {
+                int id = resultSet.getInt("session_id");
+                LocalDate date = resultSet.getDate("date").toLocalDate();
+                LocalTime time = resultSet.getTime("time").toLocalTime();
+                int filmId = resultSet.getInt("film_id");
+                Film film = filmDAO.getFilmById(filmId);
+                int freeSeats = resultSet.getInt("freeseats");
+                Session session = new Session(id, date, time, film);
+                session.setFreeSeats(freeSeats);
+//                setFreeSeats(session);
                 sessions.add(session);
 
             }
@@ -88,8 +155,34 @@ public class SessionDAOImpl implements SessionDAO {
                 LocalTime time = resultSet.getTime("time").toLocalTime();
                 int filmId = resultSet.getInt("film_id");
                 Film film = filmDAO.getFilmById(filmId);
+                int freeSeats = resultSet.getInt("freeseats");
                 Session session = new Session(id, localDate, time, film);
-                setFreeSeats(session);
+                session.setFreeSeats(freeSeats);
+                sessions.add(session);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return sessions;
+    }
+
+    @Override
+    public List<Session> getSessionsByDate(LocalDate localDate, Map<String, String> sortingParameters) {
+        List<Session> sessions = new ArrayList<>();
+        Date date = java.sql.Date.valueOf(localDate);
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(buildRequest(GET_SESSIONS_BY_DATE, sortingParameters))) {
+            preparedStatement.setDate(1, date);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            FilmDAO filmDAO = new FilmDAOImpl(ds);
+            while (resultSet.next()) {
+                int id = resultSet.getInt("session_id");
+                LocalTime time = resultSet.getTime("time").toLocalTime();
+                int filmId = resultSet.getInt("film_id");
+                Film film = filmDAO.getFilmById(filmId);
+                int freeSeats = resultSet.getInt("freeseats");
+                Session session = new Session(id, localDate, time, film);
+                session.setFreeSeats(freeSeats);
                 sessions.add(session);
             }
         } catch (SQLException e) {
@@ -181,4 +274,30 @@ public class SessionDAOImpl implements SessionDAO {
         }
         return session;
     }
+
+
+
+
+
+    private String buildRequest(String request, Map<String, String> sortingParameters) {
+        StringBuilder sb = new StringBuilder(request);
+        if (sortingParameters.containsValue("film_name")) {
+            sb.append(ORDER_BY_FILM_NAME);
+            if (sortingParameters.containsValue("DESC")) {
+                sb.append(DESC);
+            }
+        } else if (sortingParameters.containsValue("free_seats")) {
+            sb.append(ORDER_BY_FREE_SEATS);
+            if (sortingParameters.containsValue("DESC")) {
+                sb.append(DESC);
+            }
+        } else {
+            sb.append(ORDER_BY_DATE_TIME);
+            if (sortingParameters.containsValue("DESC")) {
+                sb.append(DESC);
+            }
+        }
+        return sb.toString();
+    }
+
 }
