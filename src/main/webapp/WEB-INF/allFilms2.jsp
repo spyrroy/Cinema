@@ -25,7 +25,6 @@
                 <th>Name</th>
                 <th>Description</th>
                 <th>Duration</th>
-                <th>Genre</th>
                 <th class="text-center">Action</th>
             </tr>
             </thead>
@@ -36,7 +35,6 @@
                     <td>${film.name}</td>
                     <td>${film.description}</td>
                     <td>${film.duration}</td>
-                    <td>${film.genre.name}</td>
                     <td class="text-center"><a class='btn btn-info btn-xs' href="app?cmd=addFilmForm&id=${film.id}" ><span class="glyphicon glyphicon-edit"></span> Edit</a>
                         <a href="app?cmd=deleteFilm&id=${film.id}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
                     </a>

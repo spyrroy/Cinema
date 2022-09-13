@@ -1,11 +1,5 @@
 USE cinema;
 
-insert into genre (genre_id, name)
-values (1, 'Триллер'),
-       (2, 'Боевик'),
-       (3, 'Комедия'),
-       (4, 'Ужасы');
-
 insert into seat (seat_id, number)
 values (1, '1'),
        (2, '2'),
@@ -28,10 +22,10 @@ values (1, '1'),
        (19, '19'),
        (20, '20');
 
-insert into film (film_id, name, description, duration, genre_id)
-values (1, 'Мстители', 'Фильм про Мстителей', '140', 3),
-       (2, 'Халк', 'Фильм про Халка', '110', 1),
-       (3, 'Тор', 'Фильм про Тора', '120', 2);
+insert into film (film_id, name, description, duration)
+values (1, 'Мстители', 'Фильм про Мстителей', '140'),
+       (2, 'Халк', 'Фильм про Халка', '110'),
+       (3, 'Тор', 'Фильм про Тора', '120');
 
 insert into session (session_id, date, time, film_id)
 values (1, '2022-07-20', '9:00', 1),

@@ -17,21 +17,6 @@ CREATE SCHEMA IF NOT EXISTS `cinema` DEFAULT CHARACTER SET utf8mb3;
 USE `cinema`;
 
 -- -----------------------------------------------------
--- Table `cinema`.`genre`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cinema`.`genre`;
-
-CREATE TABLE IF NOT EXISTS `cinema`.`genre`
-(
-    `genre_id` INT         NOT NULL AUTO_INCREMENT,
-    `name`     VARCHAR(45) NOT NULL UNIQUE,
-    PRIMARY KEY (`genre_id`)
-)
-    ENGINE = InnoDB
-    DEFAULT CHARACTER SET = utf8mb3;
-
-
--- -----------------------------------------------------
 -- Table `cinema`.`film`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `cinema`.`film`;
@@ -42,12 +27,7 @@ CREATE TABLE IF NOT EXISTS `cinema`.`film`
     `name`        VARCHAR(45)  NOT NULL,
     `description` VARCHAR(255) NULL DEFAULT NULL,
     `duration`    INT          NOT NULL,
-    `genre_id`    INT          NOT NULL,
-    PRIMARY KEY (`film_id`, `genre_id`),
-    INDEX `fk_film_genre1_idx` (`genre_id` ASC) VISIBLE,
-    CONSTRAINT `fk_film_genre1`
-        FOREIGN KEY (`genre_id`)
-            REFERENCES `cinema`.`genre` (`genre_id`)
+    PRIMARY KEY (`film_id`)
 )
     ENGINE = InnoDB
     DEFAULT CHARACTER SET = utf8mb3;

@@ -62,9 +62,6 @@ public class ContextListener implements ServletContextListener, HttpSessionListe
 		FilmDAO filmDAO = new FilmDAOImpl(ds);
 		LOG.trace("created 'filmDAO': {}", filmDAO);
 
-		GenreDAO genreDAO = new GenreDAOImlp(ds);
-		LOG.trace("created 'genreDAO': {}", genreDAO);
-
 		SessionDAO sessionDAO = new SessionDAOImpl(ds);
 		LOG.trace("created 'sessionDAO': {}", sessionDAO);
 
@@ -81,10 +78,6 @@ public class ContextListener implements ServletContextListener, HttpSessionListe
 		FilmService filmService = new FilmServiceImpl(filmDAO);
 		context.setAttribute("filmService", filmService);
 		LOG.trace("context.setAttribute 'filmService': {}", filmService);
-
-		GenreService genreService = new GenreServiceImpl(genreDAO);
-		context.setAttribute("genreService", genreService);
-		LOG.trace("context.setAttribute 'genreService': {}", genreService);
 
 		SessionService sessionService = new SessionServiceImpl(sessionDAO);
 		context.setAttribute("sessionService", sessionService);
@@ -111,13 +104,13 @@ public class ContextListener implements ServletContextListener, HttpSessionListe
 //		// add product flow
 		command = new AddFilmFormCommand(filmService);
 		commands.addCommand("addFilmForm", command);
-		command = new AddFilmCommand(filmService, genreService);
+		command = new AddFilmCommand(filmService);
 		commands.addCommand("addFilm", command);
 		command = new AllFilmsCommand(filmService);
 		commands.addCommand("allFilms", command);
 		command = new DeleteFilmCommand(filmService);
 		commands.addCommand("deleteFilm", command);
-		command = new EditFilmCommand(filmService, genreService);
+		command = new EditFilmCommand(filmService);
 		commands.addCommand("editFilm", command);
 		command = new AddSessionFormCommand(sessionService, filmService);
 		commands.addCommand("addSessionForm", command);

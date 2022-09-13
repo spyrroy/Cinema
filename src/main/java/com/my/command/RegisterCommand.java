@@ -43,6 +43,7 @@ public class RegisterCommand extends Command {
             LOG.debug("User added: {}", user);
             final HttpSession session = req.getSession(true);
             session.setAttribute("user", user);
+            session.setAttribute("userRole", user.getRole().getRole());
 
         } catch (DbException e) {
             LOG.error("Cannot add user with login: {}", login);

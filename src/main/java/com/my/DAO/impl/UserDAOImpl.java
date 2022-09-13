@@ -1,10 +1,7 @@
 package com.my.DAO.impl;
 
-import com.my.DAO.GenreDAO;
 import com.my.DAO.UserDAO;
 import com.my.DBManager;
-import com.my.entity.Film;
-import com.my.entity.Genre;
 import com.my.entity.Role;
 import com.my.entity.User;
 

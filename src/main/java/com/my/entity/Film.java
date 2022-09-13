@@ -7,21 +7,18 @@ public class Film {
     private String name;
     private String description;
     private int duration;
-    private Genre genre;
 
-    public Film(String name, String description, int duration, Genre genre) {
+    public Film(String name, String description, int duration) {
         this.name = name;
         this.description = description;
         this.duration = duration;
-        this.genre = genre;
     }
 
-    public Film(int id, String name, String description, int duration, Genre genre) {
+    public Film(int id, String name, String description, int duration) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.duration = duration;
-        this.genre = genre;
     }
 
     public int getId() {
@@ -56,25 +53,19 @@ public class Film {
         this.duration = duration;
     }
 
-    public Genre getGenre() {
-        return genre;
-    }
 
-    public void setGenre(Genre genre) {
-        this.genre = genre;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Film film = (Film) o;
-        return id == film.id && duration == film.duration && Objects.equals(name, film.name) && Objects.equals(description, film.description) && Objects.equals(genre, film.genre);
+        return id == film.id && duration == film.duration && Objects.equals(name, film.name) && Objects.equals(description, film.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, duration, genre);
+        return Objects.hash(id, name, description, duration);
     }
 
     @Override
@@ -84,7 +75,6 @@ public class Film {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", duration=" + duration +
-                ", genre=" + genre +
                 '}';
     }
 }

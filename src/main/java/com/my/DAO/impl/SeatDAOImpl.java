@@ -1,7 +1,6 @@
 package com.my.DAO.impl;
 
 import com.my.DAO.SeatDAO;
-import com.my.entity.Genre;
 import com.my.entity.Seat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -54,7 +53,7 @@ public class SeatDAOImpl implements SeatDAO {
                 seat = new Seat(id, resultSet.getInt("number"));
             }
         } catch (SQLException e) {
-            LOG.error("Can't find genre with id: " + id, e);
+            LOG.error("Can't find seat with id: " + id, e);
             throw new RuntimeException(e);
         }
         return seat;

@@ -17,7 +17,6 @@
     Film name: <input name="name"><br>
     Film description: <input name="description"><br>
     Film duration: <input name="duration"><br>
-    Film genre: <input name="genre"><br>
     <input type="submit" value="Add">
 </form>
 </body>

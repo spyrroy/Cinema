@@ -18,7 +18,6 @@
     Film name: <input name="name" value="${film.name}"><br>
     Film description: <input name="description" value="${film.description}"><br>
     Film duration: <input name="duration" value="${film.duration}"><br>
-    Film genre: <input name="genre" value="${film.genre.id}"><br>
     <input type="submit" value="Edit">
 </form>
 </body>

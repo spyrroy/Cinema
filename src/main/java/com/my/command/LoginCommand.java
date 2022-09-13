@@ -28,6 +28,7 @@ public class LoginCommand extends Command {
         final HttpSession session = req.getSession(true);
         LOG.debug("User added to session : {}", user);
         session.setAttribute("user", user);
+        session.setAttribute("userRole", user.getRole().getRole());
         return "redirect:app";
     }
 }

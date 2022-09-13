@@ -11,7 +11,7 @@ import java.util.List;
 
 public class FilmServiceImpl implements FilmService {
     private static final Logger LOG = LoggerFactory.getLogger(FilmServiceImpl.class);
-    private FilmDAO filmDAO;
+    private final FilmDAO filmDAO;
 
     public FilmServiceImpl(FilmDAO filmDAO) {
         this.filmDAO = filmDAO;
@@ -21,9 +21,9 @@ public class FilmServiceImpl implements FilmService {
     @Override
     public void add(Film film) throws DbException {
         LOG.debug("Adding film: {} ", film);
-        LOG.debug("Adding film: {} ", film.toString());
-        boolean status = filmDAO.addFilm(film);
-        System.out.println("Status - " + status);
+
+        filmDAO.addFilm(film);
+
 
     }
 
@@ -38,7 +38,7 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    public void update(Film film) {;
+    public void update(Film film) {
         filmDAO.updateFilm(film);
     }
 

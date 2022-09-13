@@ -3,7 +3,6 @@ package com.my.command;
 import com.my.entity.Film;
 import com.my.exception.DbException;
 import com.my.service.FilmService;
-import com.my.service.GenreService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
@@ -12,10 +11,8 @@ import org.slf4j.LoggerFactory;
 public class AddFilmCommand extends Command {
     private static final Logger LOG = LoggerFactory.getLogger(AddFilmCommand.class);
     private final FilmService filmService;
-    private final GenreService genreService;
-    public AddFilmCommand(FilmService filmService, GenreService genreService) {
+    public AddFilmCommand(FilmService filmService) {
         this.filmService = filmService;
-        this.genreService = genreService;
     }
 
     @Override
@@ -23,8 +20,7 @@ public class AddFilmCommand extends Command {
         String name = req.getParameter("name");
         String description = req.getParameter("description");
         int duration = Integer.parseInt(req.getParameter("duration"));
-        int genreId = Integer.parseInt(req.getParameter("genre"));
-        Film film = new Film(name, description, duration, genreService.getGenreById(genreId));
+        Film film = new Film(name, description, duration);
 
         try {
             filmService.add(film);

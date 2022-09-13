@@ -33,10 +33,7 @@ public class MainServlet extends HttpServlet {
             LOG.debug("cmdName: {} ", cmdName);
             Command command = commands.getCommand(cmdName);
             LOG.debug("commandName: {} ", command);
-            String url = null;
-
-            url = command.doCommand(req, resp);
-
+            String url = command.doCommand(req, resp);
             LOG.debug("url: {} ", url);
             if (url.startsWith("redirect:")) {
                 resp.sendRedirect(url.substring("redirect:".length()));

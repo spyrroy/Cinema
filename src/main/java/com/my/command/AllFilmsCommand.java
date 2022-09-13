@@ -17,6 +17,6 @@ public class AllFilmsCommand extends Command {
     public String doCommand(HttpServletRequest req, HttpServletResponse resp) throws CommandException {
         List<Film> films = filmService.getAll();
         req.setAttribute("films", films);
-        return "WEB-INF/allFilms2.jsp";
+        return "WEB-INF/allFilms.jsp";
     }
 }

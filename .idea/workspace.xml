@@ -9,21 +9,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1b42fab-861f-4c01-8b82-db548fbfb37b" name="Changes" comment="added README.md">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/my/command/LogoutCommand.java" afterDir="false" />
+    <list default="true" id="d1b42fab-861f-4c01-8b82-db548fbfb37b" name="Changes" comment="added security filter">
+      <change afterPath="$PROJECT_DIR$/src/SQL/backup/create_database.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SQL/backup/dump.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/my/filter/SecurityFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/SessionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/SessionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/SessionDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/SessionDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AllSessionsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AllSessionsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SQL/create_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/SQL/create_database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SQL/dump.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/SQL/dump.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/GenreDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/FilmDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/FilmDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/GenreDAOImlp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/SeatDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/SeatDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/DAO/impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AddFilmCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AddFilmCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/AllFilmsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/AllFilmsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/EditFilmCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/EditFilmCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/LoginCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/my/command/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/command/RegisterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/entity/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/entity/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/entity/Genre.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/my/listener/ContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/listener/ContextListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/SessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/SessionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/impl/SessionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/impl/SessionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allSessions.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allSessions.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/GenreService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/impl/FilmServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/service/impl/FilmServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/service/impl/GenreServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/servlet/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/servlet/MainServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/my/util/PasswordUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/my/util/PasswordUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addFilmForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/addFilmForm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allFilms.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allFilms2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/allFilms2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/editFilmForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/editFilmForm.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fragments/header.jspf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fragments/header.jspf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/setLocale.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/setLocale.tag" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +83,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Sync/OneDrive/EPAM/Cinema/src/main/webapp/WEB-INF&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Sync/OneDrive/EPAM/Cinema/src/SQL/backup&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -90,11 +105,11 @@
       <recent name="com.my.command" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Sync\OneDrive\EPAM\Cinema\src\SQL\backup" />
       <recent name="D:\Sync\OneDrive\EPAM\Cinema\src\main\webapp\WEB-INF" />
       <recent name="F:\Sync\OneDrive\EPAM\Cinema\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\axeli\OneDrive\EPAM\Cinema\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\axeli\OneDrive\EPAM\Cinema\src\main\java\com\my\servlet" />
-      <recent name="C:\Users\axeli\OneDrive\EPAM\Cinema\src\main\webapp\WEB-INF\Example" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.my.command" />
@@ -274,6 +289,9 @@
       <workItem from="1661774886927" duration="5315000" />
       <workItem from="1661784843682" duration="1554000" />
       <workItem from="1661843830693" duration="18896000" />
+      <workItem from="1662030999005" duration="3064000" />
+      <workItem from="1662034567748" duration="1372000" />
+      <workItem from="1663071479495" duration="6044000" />
     </task>
     <task id="LOCAL-00001" summary="added README.md">
       <created>1661695849127</created>
@@ -282,11 +300,29 @@
       <option name="project" value="LOCAL" />
       <updated>1661695849127</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added sorting of sessions">
+      <created>1662031057972</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662031057972</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -313,6 +349,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="added README.md" />
+    <MESSAGE value="added sorting of sessions" />
+    <MESSAGE value="added security filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="added security filter" />
   </component>
 </project>
